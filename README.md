@@ -1,58 +1,92 @@
 # Polymarket Copy Trading Bot
 
-## Introduction
-This project is a Polymarket Copy Trading Bot that allows users to automatically copy trades from a selected trader on Polymarket.
+A high-performance Polymarket Copy Trading Bot that automatically
+mirrors trades from any selected Polymarket trader in real time.
+Designed for reliability, speed, and configurable risk management.
 
 ## Features
-- **Automated Trading**: Automatically copy trades from a selected trader.
-- **Real-time Monitoring**: Continuously monitor the selected trader's activity.
-- **Customizable Settings**: Configure trading parameters and risk management.
+
+-   **Auto Copy Trading** -- Automatically replicates trades from a
+    target Polymarket trader.
+-   **Real-Time Monitoring** -- Detects and mirrors new orders instantly
+    using Polymarket CLOB feeds.
+-   **Risk Controls** -- Adjustable fetch interval, retry limits, and
+    timestamp filtering.
+-   **MongoDB Logging** -- Saves trade and system events for debugging
+    or analytics.
+-   **Simple Configuration** -- All settings controlled through a `.env`
+    file.
 
 ## Installation
-1. Install latest version of Node.js and npm
-2. Navigate to the project directory:
-    ```bash
-    cd polymarket_copy_trading_bot
-    ```
-3. Create `.env` file:
-    ```bash
-    touch .env
-    ```
-4. Configure env variables:
-    ```typescript
-    USER_ADDRESS = 'Selected account wallet address to copy'
 
-    PROXY_WALLET = 'Your Polymarket account address'
-    PRIVATE_KEY = 'My wallet private key'
+### 1. Install Node.js (latest LTS recommended)
 
-    CLOB_HTTP_URL = 'https://clob.polymarket.com/'
-    CLOB_WS_URL = 'wss://ws-subscriptions-clob.polymarket.com/ws'
+### 2. Clone the repository
 
-    FETCH_INTERVAL = 1      // default is 1 second
-    TOO_OLD_TIMESTAMP = 1   // default is 1 hour
-    RETRY_LIMIT = 3         // default is 3 times
+``` bash
+git clone https://github.com/ivorn42/polymarket-copy-trading-bot.git
+cd polymarket-copy-trading-bot
+```
 
-    MONGO_URI = 'mongodb+srv://polymarket_copytrading_bot:V5ufvi9ra1dsOA9M@cluster0.j1flc.mongodb.net/polymarket_copytrading'
+### 3. Create your `.env` file
 
-    RPC_URL = 'https://polygon-mainnet.infura.io/v3/90ee27dc8b934739ba9a55a075229744'
+``` bash
+touch .env
+```
 
-    USDC_CONTRACT_ADDRESS = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
-    ```
-3. Install the required dependencies:
-    ```bash
-    npm install
-    ```
-5. Build the project:
-    ```bash
-    npm run build
-    ```
-6. Run BOT:
-    ```bash
-    npm run start
-    ```
+Add the following:
+
+``` env
+# Wallet to copy trades from
+USER_ADDRESS="TARGET_WALLET_ADDRESS"
+
+# Your wallet
+PROXY_WALLET="YOUR_POLYMARKET_WALLET"
+PRIVATE_KEY="YOUR_PRIVATE_KEY"
+
+# Polymarket CLOB Endpoints
+CLOB_HTTP_URL="https://clob.polymarket.com/"
+CLOB_WS_URL="wss://ws-subscriptions-clob.polymarket.com/ws"
+
+# Bot behavior
+FETCH_INTERVAL=1        # check target trader every 1 second
+TOO_OLD_TIMESTAMP=3600  # ignore trades older than 1 hour (3600 seconds)
+RETRY_LIMIT=3           # retry failed operations up to 3 times
+
+# MongoDB
+MONGO_URI="YOUR_MONGODB_URI"
+
+# Polygon RPC + USDC Contract
+RPC_URL="https://polygon-mainnet.infura.io/v3/<YOUR_INFURA_KEY>"
+USDC_CONTRACT_ADDRESS="0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+```
+
+## Setup & Run
+
+### Install dependencies
+
+``` bash
+npm install
+```
+
+### Build
+
+``` bash
+npm run build
+```
+
+### Start the bot
+
+``` bash
+npm run start
+```
 
 ## Contributing
-Contributions are welcome! Please open an issue or submit a pull request. And if you are interested in this project, please consider giving it a star✨.
+
+Contributions are welcome!\
+Feel free to open an issue or submit a pull request.\
+If this project helps you, please consider giving it a ⭐️.
 
 ## Contact
-For any questions or inquiries, please contact me at [ivorn42]{https://t.me/ivorn42}.
+
+**Telegram:** https://t.me/ivorn42

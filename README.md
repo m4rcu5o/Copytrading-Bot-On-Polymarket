@@ -1,46 +1,81 @@
-# Polymarket Copy Trading Bot
+# ⚡ Polymarket Copytrading Bot – Real-Time Auto Copy Trader for Polymarket
 
-A high-performance Polymarket Copy Trading Bot that automatically
-mirrors trades from any selected Polymarket trader in real time.
-Designed for reliability, speed, and configurable risk management.
+<div align="center">
 
-## Features
+**High-Performance Polymarket Copytrading Bot**  
+*Real-Time Trade Mirroring • Automated Market Replication • Polygon CLOB Integration*
 
--   **Auto Copy Trading** -- Automatically replicates trades from a
-    target Polymarket trader.
--   **Real-Time Monitoring** -- Detects and mirrors new orders instantly
-    using Polymarket CLOB feeds.
--   **Risk Controls** -- Adjustable fetch interval, retry limits, and
-    timestamp filtering.
--   **MongoDB Logging** -- Saves trade and system events for debugging
-    or analytics.
--   **Simple Configuration** -- All settings controlled through a `.env`
-    file.
+[![Polymarket](https://img.shields.io/badge/Platform-Polymarket-blue.svg)](https://polymarket.com)
+[![Copy Trading](https://img.shields.io/badge/Feature-Copy%20Trading-green.svg)]()
+[![Polygon](https://img.shields.io/badge/Network-Polygon-purple.svg)](https://polygon.technology)
 
-## Installation
+</div>
 
-### 1. Install Node.js (latest LTS recommended)
+---
 
-### 2. Clone the repository
+## 🔍 SEO-Optimized Tags
+**Keywords:** polymarket copytrading bot, polymarket copy trading, polymarket trader copier, polymarket auto copy bot, copytrade polymarket, polymarket bot, polymarket automation, polygon copy trading bot.
 
-``` bash
-git clone https://github.com/ivorn42/polymarket-copy-trading-bot.git
-cd polymarket-copy-trading-bot
+---
+
+## 📘 Overview
+
+This **Polymarket Copytrading Bot** automatically mirrors trades from any chosen Polymarket trader.  
+Optimized for **speed, reliability, and consistent market execution**, it listens to Polymarket's **CLOB (Central Limit Order Book)** feed in real time and reproduces trades on your wallet.
+
+Perfect for users who want to:
+
+- Copy top-performing Polymarket traders  
+- Automate market actions  
+- Execute synchronized positions on Polygon  
+- Build analytics or trading automation systems  
+
+---
+
+## 🚀 Features
+
+- **⚡ Real-Time Auto Copy Trading**  
+  Instantly replicates orders from any target Polymarket wallet.
+
+- **📡 Live CLOB WebSocket Monitoring**  
+  Detects new orders as soon as they appear on Polymarket.
+
+- **🛡 Configurable Risk Controls**  
+  Includes fetch intervals, retry limits, and order age filtering.
+
+- **🗄 MongoDB Logging**  
+  Tracks trade history, system events, and debugging logs.
+
+- **🔧 Simple .env Configuration**  
+  All behavior and endpoints are customizable.
+
+---
+
+## 📦 Installation
+
+### 1. Install Node.js  
+Use latest LTS version.
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/m4rcu5o/Copytrading-Bot-On-Polymarket.git
+cd Copytrading-Bot-On-Polymarket
 ```
 
-### 3. Create your `.env` file
+### 3. Prepare Your `.env` File
 
-``` bash
+```bash
 touch .env
 ```
 
-Add the following:
+Add:
 
-``` env
+```env
 # Wallet to copy trades from
 USER_ADDRESS="TARGET_WALLET_ADDRESS"
 
-# Your wallet
+# Your wallet credentials
 PROXY_WALLET="YOUR_POLYMARKET_WALLET"
 PRIVATE_KEY="YOUR_PRIVATE_KEY"
 
@@ -49,9 +84,9 @@ CLOB_HTTP_URL="https://clob.polymarket.com/"
 CLOB_WS_URL="wss://ws-subscriptions-clob.polymarket.com/ws"
 
 # Bot behavior
-FETCH_INTERVAL=1        # check target trader every 1 second
-TOO_OLD_TIMESTAMP=3600  # ignore trades older than 1 hour (3600 seconds)
-RETRY_LIMIT=3           # retry failed operations up to 3 times
+FETCH_INTERVAL=1
+TOO_OLD_TIMESTAMP=3600
+RETRY_LIMIT=3
 
 # MongoDB
 MONGO_URI="YOUR_MONGODB_URI"
@@ -61,32 +96,47 @@ RPC_URL="https://polygon-mainnet.infura.io/v3/<YOUR_INFURA_KEY>"
 USDC_CONTRACT_ADDRESS="0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
 ```
 
-## Setup & Run
+---
+
+## 🏃 Setup & Run
 
 ### Install dependencies
 
-``` bash
+```bash
 npm install
 ```
 
 ### Build
 
-``` bash
+```bash
 npm run build
 ```
 
 ### Start the bot
 
-``` bash
+```bash
 npm run start
 ```
 
-## Contributing
+---
 
-Contributions are welcome!\
-Feel free to open an issue or submit a pull request.\
-If this project helps you, please consider giving it a ⭐️.
+## 🤝 Contributing
 
-## Contact
+Contributions are welcome!  
+Submit issues or PRs anytime.  
+If this project helps you, please **leave a ⭐**.
 
-**Telegram:** https://t.me/ivorn42
+---
+
+## 📬 Contact
+
+**Telegram:** https://t.me/idioRusty
+
+---
+
+<div align="center">
+
+🔥 **Optimized for Polymarket Copytrading Automation**  
+Built for speed • Built for accuracy • Built for Web3 traders  
+
+</div>

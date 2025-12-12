@@ -130,7 +130,7 @@ If this project helps you, please **leave a ⭐**.
 
 ## 📬 Contact
 
-**Telegram:** https://t.me/idioRusty
+**Telegram:** [RRR](https://t.me/microRustyme)
 
 ---
 
